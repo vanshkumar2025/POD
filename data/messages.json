@@ -1,0 +1,26 @@
+[
+  {
+    "id": "dda758e1-c83d-4a05-a824-7dddba4e4b74",
+    "text": "Hey team! Project kickoff is tomorrow at 3 PM.",
+    "teamName": "Demo Team",
+    "userId": "9855afab-d21f-4b10-a465-5c115dd15edc",
+    "userName": "Test User",
+    "createdAt": "2026-04-15T13:36:25.195Z"
+  },
+  {
+    "id": "3b7aee32-c5f1-4b2f-a573-ed45c10a3d3f",
+    "text": "fbrfdv",
+    "teamName": "Black_Red",
+    "userId": "10e42b72-2faa-46ef-be6e-41ec067f18a1",
+    "userName": "Amrit Raj",
+    "createdAt": "2026-04-15T17:54:35.677Z"
+  },
+  {
+    "id": "c69d31e4-3aa4-4827-ba7d-bc4fe77d7e41",
+    "text": "zdfnbzgd",
+    "teamName": "Black_Red",
+    "userId": "10e42b72-2faa-46ef-be6e-41ec067f18a1",
+    "userName": "Amrit Raj",
+    "createdAt": "2026-04-15T17:54:37.476Z"
+  }
+]

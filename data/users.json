@@ -1,0 +1,110 @@
+[
+  {
+    "createdAt": "2026-04-15T12:17:09.999Z",
+    "email": "tester.1776255429956@example.com",
+    "id": "fd7d21a4-7338-49cb-8b0f-234bdd29af66",
+    "name": "Aanya Sharma",
+    "passwordHash": "ae0bf84ea74ae829a0742cbfe3e1fe16:2bee7e2b9508a2424f347cabae7c0db77f60e2dd191130a34cea123c8683e732fe1641ca5ae8caa3e33959f10f0f6ed0b7a44a677b33e377f959755cc0b8d6ba",
+    "role": "Leader",
+    "teamName": "AI Research Project"
+  },
+  {
+    "createdAt": "2026-04-15T12:42:05.908Z",
+    "email": "amrit.r25052@nst.rishihood.edu.in",
+    "id": "10e42b72-2faa-46ef-be6e-41ec067f18a1",
+    "name": "Amrit Raj",
+    "passwordHash": "4fb4f3c4dd3dbc2ad8ec14343bf6c1e6:199dbcaae77f8a44be3f3e57766a6e26e69475727e90c9fa4f5afe8eca362993d648c2e480ee7751363559580d9a0986bdcaca1c871c6d48b7d775721b00402d",
+    "role": "Leader",
+    "teamName": "Black_Red",
+    "course": "BTech CS & AI",
+    "skills": [
+      "Python"
+    ],
+    "about": "",
+    "workFocus": [
+      "research",
+      "Frontend"
+    ],
+    "profileUpdatedAt": "2026-04-21T12:33:02.071Z"
+  },
+  {
+    "course": "B.Tech CSE",
+    "createdAt": "2026-04-15T13:33:32.432Z",
+    "email": "test@demo.edu",
+    "id": "9855afab-d21f-4b10-a465-5c115dd15edc",
+    "name": "Test User",
+    "passwordHash": "46aa078aa39a49b0b989d09a85535327:93cb09c87785b13debfff139f6143be2307b78fea718b8e690449774a8de9eca28cdd8e0c5dda6aeccc6b1c54c3cacb02764f82b5bea1802052568172c22221e",
+    "role": "Leader",
+    "teamName": "Demo Team",
+    "year": "3rd Year"
+  },
+  {
+    "course": "B.Tech CSE",
+    "createdAt": "2026-04-15T15:28:41.179Z",
+    "email": "alice@demo.edu",
+    "id": "670e212f-dd02-446e-87a6-7c3682481a25",
+    "name": "Alice Demo",
+    "passwordHash": "ccd69e1a0e8cb69681c8bf68a22acfca:e84b552fccf5ec2fe76c1d5bd5f2160c5ac3440eddabf8d8d96a14f96d6a4f21e52162b143d9fce68c2f3e5a8b7c81b857acdccf3a3b6db245783d3176302ab8",
+    "role": "Leader",
+    "teamName": "Capstone Crew",
+    "year": "2nd Year",
+    "skills": [
+      "React",
+      "Python",
+      "Figma",
+      "Machine Learning",
+      "Node.js"
+    ]
+  },
+  {
+    "course": "B.Tech IT",
+    "createdAt": "2026-04-15T15:30:34.124Z",
+    "email": "bob@demo.edu",
+    "id": "408b88a3-4dc1-4969-9335-00fae04af407",
+    "name": "Bob Smith",
+    "passwordHash": "cc918e13cd32d1fb5d4347f604630418:f4dc94e7b61f76af8ed79ccc0c7432487604a126520a2f545f03b98e7cb9367ec4bdee0be5c32f34fa91fadd3b6f975c4e52662cbc9d20eb3e64e4aeaa55d0a1",
+    "role": "Developer",
+    "teamName": "Capstone Crew",
+    "year": "2nd Year",
+    "skills": [
+      "Figma",
+      "UI Design",
+      "Canva",
+      "Wireframing",
+      "Adobe XD"
+    ]
+  },
+  {
+    "course": "CS101",
+    "createdAt": "2026-04-20T18:15:45.943Z",
+    "email": "alex@example.com",
+    "id": "d48c0c8a-b3f2-4e83-88c3-49a1379a9854",
+    "name": "Alex",
+    "passwordHash": "32ffbc64f305ebbedcc4c1bddd5b8a31:d69b0c9828038169015a0b9bd88bb8990659af60f31643be24b07d5943792c6bda4e37ac18379455a5e1209f24955f97eaca641a36a7c4e5fbe07d9fb33766f4",
+    "role": "Member",
+    "teamName": "",
+    "year": ""
+  },
+  {
+    "course": "",
+    "createdAt": "2026-04-20T18:17:51.429Z",
+    "email": "amrit@nst.rishihood.edu.in",
+    "id": "db4217c2-185c-4a73-bdea-ebe9ddc828d2",
+    "name": "Amrit (Admin)",
+    "passwordHash": "4fb4f3c4dd3dbc2ad8ec14343bf6c1e6:199dbcaae77f8a44be3f3e57766a6e26e69475727e90c9fa4f5afe8eca362993d648c2e480ee7751363559580d9a0986bdcaca1c871c6d48b7d775721b00402d",
+    "role": "Member",
+    "teamName": "",
+    "year": ""
+  },
+  {
+    "course": "btech",
+    "createdAt": "2026-04-28T19:33:05.806Z",
+    "email": "vanshkumardh@gmail.com",
+    "id": "35ed37bb-656f-4106-99c9-1db1bf9df8b7",
+    "name": "vansh kumar",
+    "passwordHash": "abb8d6fa63c234db8e4fae9b0e6b2e2e:2b08e7d6b14ecc2d8411e92b2db134284488c35e058f0cb1f1fb54f3d667210e5d1b7d42faa8517e92e2599423b80c6380db68dd6a682439d9dc7216e6824150",
+    "role": "Leader",
+    "teamName": "pod project",
+    "year": ""
+  }
+]

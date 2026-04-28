@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CollabSpace | Enterprise Collaboration for Students</title>
+    <meta name="description" content="A strict, no-nonsense workspace for student project teams." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="/theme.js"></script>
+  </head>
+  <body class="landing-page">
+    <div class="toast-container" id="toast-container"></div>
+
+    <header class="site-header">
+      <div class="shell header-shell">
+        <a class="brand" href="/">
+          <span class="brand-mark">C</span>
+          <span class="brand-copy"><strong>CollabSpace</strong></span>
+        </a>
+
+        <nav class="site-nav" aria-label="Main navigation">
+          <a href="#problem">Problem</a>
+          <a href="#solution">Features</a>
+          <a href="#how">Integration</a>
+          <a href="#testimonials">Customers</a>
+        </nav>
+
+        <div class="header-actions">
+          <a class="user-chip auth-only" id="nav-user-chip" href="/home.html?view=profile" hidden></a>
+          <button class="btn btn-ghost guest-only" data-open-auth="login">Log In</button>
+          <button class="btn btn-primary guest-only" data-open-auth="register">Deploy Workspace</button>
+          <button class="btn btn-ghost auth-only" id="nav-logout" hidden>Log Out</button>
+          <button class="theme-toggle-btn" aria-label="Toggle theme"></button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero hero-modern">
+        <div class="shell hero-shell">
+          <div class="hero-copy">
+            <span class="hero-pill">Modern workspace UI</span>
+            <h1>
+              Group projects, without the chaos.
+            </h1>
+            <p class="hero-text">
+              A simple, slightly messy, but super effective workspace for college teams. See what everyone's doing, assign tasks automatically, and make sure nobody slacks off.
+            </p>
+
+            <div class="hero-actions">
+              <button class="btn btn-primary" data-open-auth="register">Start a Project →</button>
+              <a class="btn btn-secondary" href="#solution">See How it Works</a>
+            </div>
+
+            <div class="hero-proof hero-proof-modern">
+              <div class="proof-card">
+                <strong>84%</strong>
+                <span>Say group work is unfair.</span>
+              </div>
+              <div class="proof-card">
+                <strong>Much</strong>
+                <span>Faster handoffs.</span>
+              </div>
+              <div class="proof-card">
+                <strong>Zero</strong>
+                <span>Last-minute panics. (Hopefully)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-modern" id="problem">
+        <div class="shell">
+          <div class="section-heading">
+            <span class="section-label">The Problem</span>
+            <h2>Why group projects usually suck</h2>
+            <p>Most student teams fall apart because nobody knows what the other person is actually doing.</p>
+          </div>
+
+          <div class="card-grid four-col feature-grid-modern">
+            <article class="feature-card">
+              <div class="icon-badge">01</div>
+              <h3>One Person Does Everything</h3>
+              <p>You know exactly what I mean. One person ends up carrying the whole team at 3 AM.</p>
+            </article>
+            <article class="feature-card">
+              <div class="icon-badge">02</div>
+              <h3>Missed Deadlines</h3>
+              <p>We forget stuff until the night before it's due. It happens.</p>
+            </article>
+            <article class="feature-card">
+              <div class="icon-badge">03</div>
+              <h3>Who Did What?</h3>
+              <p>When the professor asks who wrote which part, nobody remembers. Grading becomes a guessing game.</p>
+            </article>
+            <article class="feature-card">
+              <div class="icon-badge">04</div>
+              <h3>"I thought you were doing that"</h3>
+              <p>Tasks get completely forgotten because we assume someone else claimed it.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-modern" id="solution">
+        <div class="shell">
+          <div class="section-heading">
+            <span class="section-label">The Solution</span>
+            <h2>Built to actually get work done</h2>
+          </div>
+
+          <div class="card-grid two-col feature-grid-modern">
+            <article class="feature-card">
+              <div class="icon-badge">📋</div>
+              <h3>Simple Task Board</h3>
+              <p>A basic To-Do board that updates for everyone. Stop asking in the group chat if the intro is done.</p>
+            </article>
+            <article class="feature-card">
+              <div class="icon-badge">📊</div>
+              <h3>Contribution Graph</h3>
+              <p>A clear log of who finished what. Useful for proving to the TA that you actually did work.</p>
+            </article>
+            <article class="feature-card">
+              <div class="icon-badge">⏰</div>
+              <h3>Countdown Clock</h3>
+              <p>A giant deadline timer right on the dashboard. Stressful, but it keeps us moving.</p>
+            </article>
+            <article class="feature-card">
+              <div class="icon-badge">💬</div>
+              <h3>Project Chat</h3>
+              <p>A place to talk about the project without it getting buried under memes in your iMessage group.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section cta-section section-modern">
+        <div class="shell">
+          <div class="cta-panel">
+            <h2>Let's build something cool</h2>
+            <p>Set up your team's workspace and try out CollabSpace for your next big assignment.</p>
+            <div class="cta-actions">
+              <button class="btn btn-primary" data-open-auth="register">Create Workspace →</button>
+              <button class="btn btn-secondary" data-open-auth="login">Log In</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell footer-shell">
+        <div>
+          <h3>CollabSpace</h3>
+          <p>Systematizing student collaboration.</p>
+        </div>
+        <div class="footer-links">
+          <a href="#problem">Architecture</a>
+          <a href="#solution">Features</a>
+          <a href="/dashboard">Console</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Auth Dialog -->
+    <dialog class="auth-dialog" id="auth-dialog">
+      <div class="auth-shell">
+        <button class="close-dialog" id="close-auth-dialog">×</button>
+
+        <div class="auth-header">
+          <h2>Authentication</h2>
+          <p>Access your workspace.</p>
+        </div>
+
+        <div class="auth-tabs">
+          <button class="auth-tab is-active" id="register-tab" data-auth-tab="register">Register</button>
+          <button class="auth-tab" id="login-tab" data-auth-tab="login">Log In</button>
+        </div>
+
+        <p class="form-feedback" id="auth-feedback" hidden></p>
+
+        <section class="auth-panel is-active" id="register-panel">
+          <form id="register-form">
+            <label class="field"><span>Name</span><input type="text" name="name" required /></label>
+            <label class="field"><span>Email</span><input type="email" name="email" required /></label>
+            <label class="field"><span>Course</span><input type="text" name="course" /></label>
+            <label class="field">
+              <span>Password</span>
+              <div class="input-action-row">
+                <input type="password" id="register-password" name="password" required />
+                <button class="input-action" type="button" data-toggle-password="register-password">Show</button>
+              </div>
+            </label>
+            <button class="btn btn-primary wide-button" type="submit">Initialize Account</button>
+          </form>
+        </section>
+
+        <section class="auth-panel" id="login-panel" hidden>
+          <form id="login-form">
+            <label class="field"><span>Email</span><input type="email" name="email" required /></label>
+            <label class="field">
+              <span>Password</span>
+              <div class="input-action-row">
+                <input type="password" id="login-password" name="password" required />
+                <button class="input-action" type="button" data-toggle-password="login-password">Show</button>
+              </div>
+            </label>
+            <button class="btn btn-primary wide-button" type="submit">Authenticate</button>
+          </form>
+        </section>
+      </div>
+    </dialog>
+
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>

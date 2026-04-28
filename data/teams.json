@@ -1,0 +1,72 @@
+[
+  {
+    "id": "1ac01319-f4eb-433b-88f1-ecd7ec07dbbc",
+    "name": "Demo Team",
+    "createdBy": "9855afab-d21f-4b10-a465-5c115dd15edc",
+    "members": [
+      {
+        "userId": "9855afab-d21f-4b10-a465-5c115dd15edc",
+        "name": "Test User",
+        "role": "Leader",
+        "joinedAt": "2026-04-15T13:33:32.466Z"
+      }
+    ],
+    "createdAt": "2026-04-15T13:33:32.466Z",
+    "projectTitle": "Demo Team Project",
+    "deadline": "2026-05-15T13:33:32.466Z"
+  },
+  {
+    "id": "5d0e476b-4177-44d2-af9b-2d70ac08a463",
+    "name": "Capstone Crew",
+    "createdBy": "670e212f-dd02-446e-87a6-7c3682481a25",
+    "members": [
+      {
+        "userId": "670e212f-dd02-446e-87a6-7c3682481a25",
+        "name": "Alice Demo",
+        "role": "Leader",
+        "joinedAt": "2026-04-15T15:30:34.070Z"
+      },
+      {
+        "userId": "408b88a3-4dc1-4969-9335-00fae04af407",
+        "name": "Bob Smith",
+        "role": "Developer",
+        "joinedAt": "2026-04-15T15:30:34.154Z"
+      }
+    ],
+    "createdAt": "2026-04-15T15:30:34.070Z",
+    "projectTitle": "AI Research Project",
+    "deadline": "2026-05-20"
+  },
+  {
+    "id": "bb7c9abe-8a3b-4af8-8602-4a092b282033",
+    "name": "Black_Red",
+    "createdBy": "10e42b72-2faa-46ef-be6e-41ec067f18a1",
+    "members": [
+      {
+        "userId": "10e42b72-2faa-46ef-be6e-41ec067f18a1",
+        "name": "Amrit Raj",
+        "role": "Leader",
+        "joinedAt": "2026-04-15T15:46:07.593Z"
+      }
+    ],
+    "createdAt": "2026-04-15T15:46:07.593Z",
+    "projectTitle": "POD",
+    "deadline": "2026-05-01"
+  },
+  {
+    "id": "b6f157c9-3dca-4bb1-83d4-65db1abb8733",
+    "name": "pod project",
+    "createdBy": "35ed37bb-656f-4106-99c9-1db1bf9df8b7",
+    "members": [
+      {
+        "userId": "35ed37bb-656f-4106-99c9-1db1bf9df8b7",
+        "name": "vansh kumar",
+        "role": "Leader",
+        "joinedAt": "2026-04-28T19:34:01.800Z"
+      }
+    ],
+    "createdAt": "2026-04-28T19:34:01.800Z",
+    "projectTitle": "pod",
+    "deadline": "2026-05-28T19:34:01.800Z"
+  }
+]

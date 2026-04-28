@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CollabSpace - Edit Profile</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/theme.js"></script>
+</head>
+<body class="settings-page">
+  <div class="app-layout">
+    
+    <!-- Global Sidebar -->
+    <aside class="app-sidebar">
+      <div class="sidebar-header">
+        <div class="sidebar-brand" onclick="window.location.href='/'">
+          <div class="brand-mark">C</div>
+          CollabSpace
+        </div>
+      </div>
+      
+      <nav class="sidebar-nav">
+        <!-- Re-use the home.html context since Settings is global -->
+        <button class="sidebar-nav-item active">
+          <span>Edit Profile</span>
+        </button>
+      </nav>
+      
+      <div class="sidebar-footer">
+        <button onclick="window.location.href='/home.html'" class="sidebar-nav-item">Return to Dashboard</button>
+        <button class="sidebar-nav-item theme-toggle-btn sidebar-theme-inline-fix" aria-label="Toggle theme"></button>
+      </div>
+    </aside>
+
+    <main class="app-main">
+      <div class="app-main-header">
+        <h1 class="app-main-title">Edit Profile</h1>
+        <p class="app-main-subtitle">Manage your identity, interests, and the kind of work you usually take on.</p>
+      </div>
+      
+      <section class="dashboard-panel settings-profile-card settings-profile-card-modern">
+        <form id="settings-form" class="settings-profile-form">
+          <div class="settings-field">
+            <label for="name">Your Name</label>
+            <input class="settings-input" type="text" id="name" required>
+          </div>
+
+          <div class="settings-field">
+            <label for="course">Course / Major</label>
+            <input class="settings-input" type="text" id="course" placeholder="e.g. CS 101">
+          </div>
+
+          <div class="settings-field">
+            <label for="about">About You</label>
+            <textarea class="settings-input settings-textarea" id="about" rows="4" placeholder="Share what you enjoy building, how you like to collaborate, and what makes you effective on a team."></textarea>
+          </div>
+
+          <div class="settings-field">
+            <label for="skills-input">Skills & Interests</label>
+            <div class="tag-editor" id="skills-editor">
+              <div id="skills-tags" class="tag-editor-list"></div>
+              <input class="tag-editor-input" type="text" id="skills-input" placeholder="Type a skill and press Enter">
+            </div>
+            <p class="settings-helper">Add the things you're good at or enjoy working with.</p>
+          </div>
+
+          <div class="settings-field">
+            <label for="work-focus-input">What I Usually Work On</label>
+            <div class="tag-editor" id="work-focus-editor">
+              <div id="work-focus-tags" class="tag-editor-list"></div>
+              <input class="tag-editor-input" type="text" id="work-focus-input" placeholder="Frontend, backend, design, research...">
+            </div>
+            <p class="settings-helper">Press Enter or comma to add each area.</p>
+          </div>
+
+          <div class="settings-actions">
+            <button type="submit" class="btn btn-primary">Save Changes</button>
+          </div>
+        </form>
+      </section>
+    </main>
+  </div>
+
+  <script src="/settings.js"></script>
+</body>
+</html>

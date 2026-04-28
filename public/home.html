@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - CollabSpace</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/theme.js"></script>
+</head>
+<body class="home-page">
+
+  <div class="app-layout">
+    
+    <!-- Global Sidebar -->
+    <aside class="app-sidebar">
+      <div class="sidebar-header">
+        <div class="sidebar-brand" onclick="window.location.href='/'">
+          <div class="brand-mark">C</div>
+          CollabSpace
+        </div>
+      </div>
+      
+      <nav class="sidebar-nav">
+        <button id="nav-btn-projects" class="sidebar-nav-item active" onclick="switchView('projects')">
+          <span>Workspace Hub</span>
+        </button>
+        <button id="nav-btn-profile" class="sidebar-nav-item" onclick="switchView('profile')">
+          <span>Profile</span>
+        </button>
+      </nav>
+      
+      <div class="sidebar-footer">
+        <span id="user-greeting" class="project-context-subtitle sidebar-greeting">Loading...</span>
+        <button onclick="window.location.href='/settings.html'" class="sidebar-nav-item">Edit Profile</button>
+        <button class="sidebar-nav-item theme-toggle-btn sidebar-theme-inline-fix" aria-label="Toggle theme"></button>
+        <button onclick="logout()" class="sidebar-nav-item">Sign Out</button>
+      </div>
+    </aside>
+
+    <main class="app-main">
+      
+      <!-- Profile View -->
+      <section id="view-profile" class="view-section">
+        <div class="app-main-header">
+          <h1 class="app-main-title">Profile Portal</h1>
+          <p class="app-main-subtitle">See your strengths, current projects, and the work you’ve been driving lately.</p>
+        </div>
+        <div class="profile-card profile-card-modern">
+          <div class="profile-header">
+            <div id="p-avatar" class="avatar-circle">?</div>
+            <div class="profile-header-copy">
+              <h2 id="p-name" class="profile-name">User Name</h2>
+              <div class="profile-meta-row">
+                <div id="p-role" class="profile-role-badge">Member</div>
+                <div id="p-course" class="profile-meta-chip">Course not added yet</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="profile-stats-grid" id="p-stats">
+            <div class="profile-stat-card">
+              <span class="profile-stat-value">0</span>
+              <span class="profile-stat-label">Projects</span>
+            </div>
+            <div class="profile-stat-card">
+              <span class="profile-stat-value">0</span>
+              <span class="profile-stat-label">Tasks Completed</span>
+            </div>
+            <div class="profile-stat-card">
+              <span class="profile-stat-value">0</span>
+              <span class="profile-stat-label">Contributions</span>
+            </div>
+          </div>
+
+          <div class="profile-block">
+            <div class="profile-section-title">About You</div>
+            <p id="p-about" class="bio-text">Passionate about building projects and collaborating with teams to deliver excellent digital experiences.</p>
+          </div>
+
+          <div class="profile-insights-grid">
+            <div class="profile-block">
+              <div class="profile-section-title">Skills & Interests</div>
+              <div id="p-skills" class="skills-list"></div>
+            </div>
+
+            <div class="profile-block">
+              <div class="profile-section-title">What I Usually Work On</div>
+              <div id="p-work-focus" class="skills-list"></div>
+            </div>
+          </div>
+
+          <div class="profile-block">
+            <div class="profile-section-title">Projects Involved</div>
+            <div id="p-projects" class="profile-projects-list">
+              <div class="team-empty">No active projects yet.</div>
+            </div>
+          </div>
+
+          <div class="profile-block">
+            <div class="profile-section-title">Project Contributions</div>
+            <div id="p-contributions" class="profile-contributions-list">
+              <div class="team-empty">Contribution details will appear once you join a project.</div>
+            </div>
+          </div>
+
+          <div class="profile-block">
+            <div class="profile-section-title">Recent Activity</div>
+            <div class="activity-container" id="p-activity">
+              <div class="activity-item">
+                <div class="activity-marker"></div>
+                <div class="activity-copy">
+                  <div class="activity-time">2h ago</div>
+                  <div class="activity-desc">Updated profile settings</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects View -->
+      <section id="view-projects" class="view-section active">
+        <div class="app-main-header projects-header-modern">
+          <div>
+            <h1 class="app-main-title">Workspace Hub</h1>
+            <p class="app-main-subtitle">Jump back into your projects or initialize a new enterprise initiative.</p>
+          </div>
+          <button onclick="document.getElementById('create-project-modal').showModal()" class="btn btn-primary">+ New Workspace</button>
+        </div>
+
+        <h3 class="project-group-title project-group-title-modern">🔥 Projects You Lead</h3>
+        <div id="leader-grid" class="project-grid"></div>
+
+        <h3 class="project-group-title project-group-title-modern">🤝 Projects You've Joined</h3>
+        <div id="member-grid" class="project-grid"></div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Create Project Modal -->
+  <dialog id="create-project-modal">
+    <div class="modal-shell">
+    <h2 class="modal-title">Create Workspace</h2>
+    <p class="modal-subtitle">Initialize a new project environment for your team to collaborate.</p>
+    
+    <form id="create-project-form" class="modal-form">
+      <div class="modal-field">
+        <label for="cp-name">WORKSPACE NAME</label>
+        <input class="modal-input" type="text" id="cp-name" required placeholder="e.g. Acme Integration">
+      </div>
+      <div class="modal-field">
+        <label for="cp-title">INTERNAL ALIAS (OPTIONAL)</label>
+        <input class="modal-input" type="text" id="cp-title" placeholder="e.g. Project Phoenix">
+      </div>
+      <div class="modal-actions">
+        <button type="button" class="btn btn-secondary" onclick="document.getElementById('create-project-modal').close()">Cancel</button>
+        <button type="submit" class="btn btn-primary">Initialize</button>
+      </div>
+    </form>
+    </div>
+  </dialog>
+
+  <script src="/home.js"></script>
+</body>
+</html>

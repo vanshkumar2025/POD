@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CollabSpace - Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/theme.js"></script>
+</head>
+<body class="dashboard-body">
+  <div class="app-layout">
+    
+    <!-- Global App Sidebar -->
+    <aside class="app-sidebar">
+      <div class="sidebar-header">
+        <div class="sidebar-brand" onclick="window.location.href='/'">
+          <div class="brand-mark">C</div>
+          CollabSpace
+        </div>
+        <div class="project-context-card" id="project-context-card">
+          <h3 class="project-context-title" id="context-team-name">Workspace</h3>
+          <p class="project-context-subtitle" id="context-team-meta">Connecting...</p>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <button class="sidebar-nav-item active" onclick="switchDashboardView('board', this)">
+          <span>Dashboard</span>
+        </button>
+        <button class="sidebar-nav-item" onclick="switchDashboardView('archive', this)">
+          <span>Archive</span>
+        </button>
+        <button class="sidebar-nav-item" onclick="switchDashboardView('contributions', this)">
+          <span>Contributions</span>
+        </button>
+        <button class="sidebar-nav-item" onclick="switchDashboardView('chat', this)">
+          <span>Chat</span>
+        </button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <span id="nav-user-chip" class="project-context-subtitle sidebar-user-chip"></span>
+        <button id="nav-invites-btn" class="sidebar-nav-item sidebar-invites-btn">Invites (0)</button>
+        <button onclick="window.location.href='/home.html'" class="sidebar-nav-item">Back to Home</button>
+        <button class="sidebar-nav-item theme-toggle-btn sidebar-theme-inline-fix" aria-label="Toggle theme"></button>
+        <button id="nav-logout" class="sidebar-nav-item">Log Out</button>
+      </div>
+    </aside>
+
+    <!-- App Main Canvas -->
+    <main class="app-main">
+      
+      <!-- 1. Task Board View -->
+      <section id="view-board" class="view-section active">
+        <div class="app-main-header">
+          <h1 class="app-main-title">Team Dashboard</h1>
+          <p class="app-main-subtitle" id="board-subtitle">Project Overview</p>
+        </div>
+        
+        <div class="board-header">
+          <h2 class="board-title">Task Board</h2>
+          <button class="btn btn-primary" id="add-task-btn">+ Add Task</button>
+        </div>
+        
+        <div class="kanban-board">
+          <div class="kanban-column"><h3 class="kanban-column-title title-todo">To Do</h3><div id="col-todo" class="task-list"></div></div>
+          <div class="kanban-column"><h3 class="kanban-column-title title-progress">In Progress</h3><div id="col-progress" class="task-list"></div></div>
+          <div class="kanban-column"><h3 class="kanban-column-title title-done">Done</h3><div id="col-done" class="task-list"></div></div>
+        </div>
+
+        <div class="dashboard-lower-grid">
+          <div class="dashboard-panel team-panel">
+            <h3 class="sidebar-title">Group Members</h3>
+            <div id="team-list" class="team-list"></div>
+            <div id="invite-panel" class="team-invite-panel team-invite-panel-hidden">
+              <h4 class="sidebar-title">Add Member</h4>
+              <form id="invite-form" class="inline-form">
+                <input class="settings-input" type="email" id="invite-email" placeholder="student@edu" required>
+                <button type="submit" class="btn btn-secondary">Invite</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="view-archive" class="view-section">
+        <div class="app-main-header">
+          <h1 class="app-main-title">Completed Tasks Archive</h1>
+          <p class="app-main-subtitle">Tasks move here automatically 24 hours after completion. Archived tasks stay view-only, and only the project leader can delete them.</p>
+        </div>
+
+        <div class="dashboard-panel archive-panel">
+          <div class="archive-panel-header">
+            <div>
+              <h2 class="board-title">Archive</h2>
+              <p class="archive-panel-subtitle" id="archive-subtitle">Loading archived tasks...</p>
+            </div>
+          </div>
+          <div id="archive-list" class="archive-list"></div>
+        </div>
+      </section>
+
+      <!-- 2. Contributions View -->
+      <section id="view-contributions" class="view-section">
+        <div class="app-main-header">
+          <h1 class="app-main-title">Contribution Tracker</h1>
+          <p class="app-main-subtitle">See how each member is contributing to the project</p>
+        </div>
+        
+        <div id="analytics-content-v2" class="contribution-layout">
+          <section class="dashboard-panel contribution-panel contribution-breakdown-panel">
+            <div class="contribution-panel-head">
+              <h2 class="board-title">Contribution Breakdown</h2>
+              <p class="contribution-panel-copy">Live progress across the team, based on completed work.</p>
+            </div>
+            <div id="analytics-pie-chart" class="contribution-chart-shell"></div>
+            <div id="analytics-pie-legend" class="contribution-legend"></div>
+          </section>
+          <div id="analytics-bars" class="contribution-member-list"></div>
+        </div>
+      </section>
+
+      <!-- 3. Chat View -->
+      <section id="view-chat" class="view-section">
+        <div class="app-main-header">
+          <h1 class="app-main-title">Team Chat</h1>
+          <p class="app-main-subtitle" id="chat-subtitle">Members</p>
+        </div>
+        
+        <div class="dashboard-panel chat-shell-modern">
+          <div id="chat-container" class="chat-box chat-box-modern"></div>
+          <form id="chat-form" class="chat-form-modern">
+            <div class="chat-input-wrap-modern">
+              <span class="chat-input-icon-modern">📝</span>
+              <input type="text" id="chat-input" class="settings-input chat-input-modern" placeholder="Type a message... (use @name to mention)" required>
+            </div>
+            <button type="submit" class="btn btn-primary chat-send-modern">Send</button>
+          </form>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Add Task Modal -->
+  <dialog id="task-modal">
+    <div class="modal-shell">
+    <h3 id="task-modal-title" class="modal-title">New Task</h3>
+    <form id="task-form" class="modal-form">
+      <div class="modal-field">
+        <label>What needs doing?</label>
+        <input class="modal-input" type="text" id="task-title" required>
+      </div>
+      <div class="modal-field">
+        <label>Details</label>
+        <textarea class="modal-textarea" id="task-desc" rows="3"></textarea>
+      </div>
+      <div class="modal-field">
+        <label>Assign To</label>
+        <select class="modal-select" id="task-assignee">
+          <option value="">✨ Auto-assign with AI</option>
+        </select>
+      </div>
+      <div class="modal-actions">
+        <button type="button" id="close-task-modal" class="btn btn-ghost">Cancel</button>
+        <button type="submit" id="task-submit-btn" class="btn btn-primary">Create Task</button>
+      </div>
+    </form>
+    </div>
+  </dialog>
+  <!-- Analytics Modal -->
+  <dialog id="analytics-modal">
+    <div class="modal-shell">
+    <div class="modal-header">
+      <h3 class="modal-title">Squad Analytics</h3>
+      <button type="button" class="btn btn-ghost" onclick="document.getElementById('analytics-modal').close()">Close</button>
+    </div>
+    <div id="analytics-content">
+      <!-- Injected by JS -->
+      <div class="team-empty">Loading...</div>
+    </div>
+    </div>
+  </dialog>
+
+  <!-- Create Team Modal -->
+  <dialog id="create-team-modal">
+    <div class="modal-shell">
+    <h3 class="modal-title">Start a new squad</h3>
+    <form id="create-team-form" class="modal-form">
+      <div class="modal-field">
+        <label>Team Name</label>
+        <input class="modal-input" type="text" id="new-team-name" required>
+      </div>
+      <div class="modal-actions">
+        <button type="button" class="btn btn-ghost" onclick="document.getElementById('create-team-modal').close()">Cancel</button>
+        <button type="submit" class="btn btn-primary">Create</button>
+      </div>
+    </form>
+    </div>
+  </dialog>
+
+  <!-- Invitations Modal -->
+  <dialog id="invites-modal">
+    <div class="modal-shell">
+    <div class="modal-header">
+      <h3 class="modal-title">Pending Invites</h3>
+      <button type="button" class="btn btn-ghost" onclick="document.getElementById('invites-modal').close()">Close</button>
+    </div>
+    <div id="invites-content" class="modal-form">
+      <!-- Populated by JS -->
+    </div>
+    </div>
+  </dialog>
+
+  <script src="/dashboard.js"></script>
+</body>
+</html>
